@@ -1,5 +1,6 @@
 # fed-assignment1
 This is my FED Assignment 1 project.
+Note: For video walkthrough, please refer to the submission on BrightSpace.
 
 # Loops and Love, a nonprofit committed to contributing to the community through crocheting.
 
