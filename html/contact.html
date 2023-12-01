@@ -1,10 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <!--CSS stylesheet-->
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+        <!--Stylesheet for Facebook, Instagram, Twitter logo on footer-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <!--Fonts for logo and body text-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -12,9 +18,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+        <!--Javascript script for uppercase input and input validation-->
+        <script src="../javascript/script.js"></script>
+
+        <!--Title shown at tab-->
         <title>Contact us</title>
     </head>
+
     <body class="contact-body">
+        
         <!--Header-->
         <header class="header">
             <div class="header-content">
@@ -33,15 +46,23 @@
 
         <!--Main content-->
         <main>
+
+            <!--Title-->
             <div class="contact-title">
                 <h1>Contact us</h1>
             </div>
             
+            <!--Page content-->
             <section class="contact-container">
+                
                 <div class="split">
+
+                    <!--Image of crochet-->
                     <div class="split-profilepic">
-                        <img src="https://i.insider.com/60352a14bed5c50011a2c0c9?width=700">
+                        <img src="https://i.insider.com/60352a14bed5c50011a2c0c9?width=700" alt="Image of crochet plushies" title="Loops and Love">
                     </div>
+
+                    <!--Contact information-->
                     <div class="split-info">
                         <div class="info">
                             <h4>Contact number:</h4>
@@ -60,14 +81,22 @@
                         <br>
                     </div>
                 </div>
+                
                 <div class="split">
+
+                    <!--Join us form-->
                     <div class="split-form">
+
+                        <!--Subheader-->
                         <h2 class="split-topic">Come and join us!</h2>
                         <form>
+
+                            <!--Name-->
                             <label for="name">Name: </label>
-                            <input type="text" placeholder="Enter your name here..." name="name" id="name" required><br><br>
+                            <input type="text" placeholder="Enter a name (5-20 characters)" name="name" id="name" required><br><br>
                             
-                            <label for="age">Age: </label><br>
+                            <!--Age-->
+                            <p>Age: </p><br>
                             <input type="radio" id="10-19" name="age" value="10-19 years old">
                             <label for="10-19">10-19 years old</label><br>
                             <input type="radio" id="20-29" name="age" value="20-29 years old">
@@ -77,10 +106,12 @@
                             <input type="radio" id="above" name="age" value="40 years old and above">
                             <label for="above">40 years old and above</label><br><br>
 
+                            <!--Email-->
                             <label for="email">Email: </label>
                             <input type="email" placeholder="xyz@mail.com" name="email" id="email" required><br><br>
 
-                            <label for="survey">How did you hear about us?</label><br>
+                            <!--Survey-->
+                            <p>How did you hear about us?</p><br>
                             <input type="checkbox" id="searchengine" name="survey" value="Search Engine (Google, Bing etc.)">
                             <label for="searchengine">Search Engine (Google, Bing etc.)</label><br>
                             <input type="checkbox" id="socialmedia" name="survey" value="Social Media">
@@ -94,19 +125,21 @@
                             <input type="checkbox" id="other" name="survey" value="Other">
                             <label for="other">Other</label><br><br>
 
-                            <a href="#" class="submit-button">Submit</a>          
+                            <!--Submit button-->
+                            <input type="submit" value="Submit" class="submit-button">         
                         </form>
                     </div>
                 </div>
             </section>
         </main>
 
+        <!--Footer and links of Facebook, Instagram, Twitter-->
         <footer>
             <div class="footer">
                 <div class="footer-info">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
                 </div>
             </div>
         </footer>

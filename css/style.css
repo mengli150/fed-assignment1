@@ -1,5 +1,7 @@
 @charset "UTF-8";
+
 /* RESET */
+/* For basic reset of all pages */
 *{
     padding: 0;
     margin: 0;
@@ -15,40 +17,45 @@ ul{
 }
 
 /* BASE STYLES */
+/* For background image settings, background colour, scrollbar, and font style */
 body{
     background-color: #f7e9d0;
     min-height: 62.5rem;
     padding-top: 3.75rem;
 }
 
+/* Background image configuration */
 .index-body{
-    /* Background image */
-    background-image: url(https://www.tinycurl.co/wp-content/uploads/2022/05/blog-frog-amigurumi1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    transition: background-image 1.6s ease-in-out;
 }
 
+/* Scrollbar */
 .about-body,
 .project-body,
 .contact-body{
     overflow: auto;
 }
 
+/* Font style */
 main{
     font-family: 'Lato', sans-serif;
 }
 
-
-
 /* NORMAL STYLES */
+/* Styling for navigation bar and its contents */
+/* Make navigation bar always stay at top and above the contents (z-index) */
+/* Shadow below navbar to make it look more 3D */
 .header{
     background-color: burlywood;
     position: fixed;
     width: 100%;
     top: 0;
     border-bottom: 5px solid rgb(100, 69, 28);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
     z-index: 999;
 }
 
@@ -63,8 +70,11 @@ main{
     font-family: 'Lato', sans-serif;
 }
 
+/* Logo at the navigation bar */
+/* Styling of logo, normal, hover and focus states */
 .logo{
     font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo-text{
@@ -77,11 +87,14 @@ main{
     color: rgb(125, 98, 66);
 }
 
+/* Navigation items (About, Projects, Contact us) */
+/* Make the list of navigation items flex and adding a gap between them */
 .nav-list{
     display: flex;
     column-gap: 2.5rem;
 }
 
+/* Styling of the links, colour and smooth transition */
 .nav-link{
     color: grey;
     font-size: 1rem;
@@ -89,11 +102,13 @@ main{
     position: relative;
 }
 
+/* When hover, text become white colour */
 .nav-link:hover,
 .nav-link:focus{
     color: white;
 }
 
+/* Add underline effect to under the navigation items, styling the underline */
 .nav-link:after{
     content: '';
     height: 0.2rem;
@@ -108,14 +123,18 @@ main{
     pointer-events: none;
 }
 
+/* Smooth transition for underline hover style */
 .nav-link:hover::after{
     opacity: 1;
 }
 
+/* Contact us button on the navigation bar */
+/* Styling the button (font size, colour, button shape) */
 .nav-contactbtn{
     color: white;
     font-weight: 500;
     background-color: #307362;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 0.5rem 1.2rem;
     border-radius: 62.5rem;
     text-transform: uppercase;
@@ -124,17 +143,12 @@ main{
     transition: all 0.2s;
 }
 
+/* Change button background colour when hover */
 .nav-contactbtn:hover{
     background-color: #a0c1b9;
 }
 
-
-
-
-
-
-
-/* Landing page */
+/* Landing page (index.html) */
 .index-container{
     text-align: center;
     padding-top: 15rem;
@@ -142,6 +156,7 @@ main{
     text-shadow: white 0px 0px 10px;
 }
 
+/* Styling of title, description and button */
 .main-title{
     padding-bottom: 1.5rem;
     font-size: 4.8em;
@@ -156,6 +171,7 @@ main{
 .main-explorebtn{
     color: white;
     background-color: #307362;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 1rem 4.4rem;
     border-radius: 20px;
     text-transform: uppercase;
@@ -164,23 +180,18 @@ main{
     transition: all 0.2s;
 }
 
+/* Changing background colour of button when hover */
 .main-explorebtn:hover{
     background-color: #a0c1b9;
 }
 
-
-
-
-
-
-
-/* About page */
+/* About page (about.html) */
+/* Aligning and styling title, and align the contents of the page */
 .about-title{
     text-align: center;
-    padding-top: 50px;
+    padding-top: 3.125rem;
     font-size: 2em;
     display: block;
-    font-family: 'Lato', sans-serif;
 }
 
 .about-container{
@@ -188,17 +199,17 @@ main{
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    font-family: 'Lato', sans-serif;
 }
 
+/* Content of about.html page (image and texts) */
 .columns{
     flex-basis: 45%;
     display: flex;
     flex-direction: column;
     padding: 2%;
-
 }
 
+/* ALigning the topic, contents and iamge */
 .column-topic{
     font-size: 2.3em;
     margin-bottom: 4%;
@@ -212,15 +223,16 @@ main{
     max-width: 100%;
 }
 
-
-/* Project page */
+/* Projects page (project.html) */
+/* Change alignment and positioning of title */
 .project-title{
     text-align: center;
     padding-top: 2rem;
     font-size: 2rem;
     padding-bottom: 1.5rem;
 }
-        
+
+/* Make content on project.html flex and align them on the page */
 .project-container{
     display:flex;
     flex-direction: row;
@@ -230,6 +242,7 @@ main{
     margin-bottom: 10%;
 }
 
+/* Content of project.html page (image and texts, 3 blocks, image scaling and opacity when hover) */
 .project-content h1{
     margin-top: 1rem;
 }
@@ -241,10 +254,11 @@ main{
 .project-content img{
     width:100%;
     height:auto;
-    height:200px;
+    height:12.5rem;
     object-fit: cover;
 }
-        
+
+/* Aligning the div blocks and styling it (background colour, size) */
 .project-content{
     display:flex;
     flex-direction: column;
@@ -252,37 +266,43 @@ main{
     justify-content: center;
     max-width:25rem;
     min-width:18rem;
-    margin: 10px;
+    margin: 0.625rem;
     text-align: center;
-    background-color: aliceblue; 
+    background-color: aliceblue;
 }
 
+/* Change opacity and cursor when hover */
 .project-content:hover{
     opacity: 0.7;
+    cursor: pointer;
 }
 
+/* When hover on the image, increase size */
+.project-content img:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
 
-
-
-
-/* Contact page */
+/* Contact us page (contact.html) */
+/* Contact title styling and alignment */
 .contact-title{
     text-align: center;
-    padding-top: 45px;
+    padding-top: 2.8215rem;
     font-size: 2em;
-    padding-bottom: 5px;
+    padding-bottom: 0.3125rem;
     display: block;
-    font-family: 'Lato', sans-serif;
 }
 
+/* Making whole contact.html body flex and setting the alignment */
 .contact-container{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    font-family: 'Lato', sans-serif;
 }
 
+/* Styling contents of 2 columns (Contact information and join us form) */
+/* Includes styling of image, contact information, submit button) */
 .split{
     flex-basis: 45%;
     display: flex;
@@ -290,6 +310,7 @@ main{
     padding: 2%;
 }
 
+/* Styling image, rounded border, black border and arrangement */
 .split img{
     max-width: 100%;
     border-radius: 5000px;
@@ -299,16 +320,17 @@ main{
 
 .split-profilepic{
     display: flex;
-    align-items: top;
     justify-content: center;
     height: 40%;
 }
 
+/* Styling title so it does not make contact with the content below */
 .split-topic{
     font-size: 2.3em;
     margin-bottom: 4%;
 }
 
+/* Aligning forms on the page */
 .split-form{
     margin-left: 2rem;
 }
@@ -321,30 +343,27 @@ main{
     text-align: center;
 }
 
+/* Styling of input boxes, when pressed, input box will have black border */
 input[type=text],
 input[type=email]{
     background-color: #e6edf0;
     color: black;
     padding: 2%;
     width: 80%;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border-color: #f9d495;
 }
 
-input[type=text]:focus,
-input[type=email]:focus{
-    border: 3px solid gainsboro;
-}
-
-
+/* Placeholder text inside text box colour */
 ::placeholder{
     color: grey;
 }
 
-
+/* Submit button at contact.html, background of button, button text style */
 .submit-button{
     width: 100%;
     background-color: #307362;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white;
     font-weight: 500;
     border-radius: 10rem;
@@ -355,39 +374,40 @@ input[type=email]:focus{
     border-style: none;
 }
 
-.submit-button{
-    color: white;
-}
-
+/* Change button style when hover, background colour and cursor to pointer */
 .submit-button:hover{
     background-color: #a0c1b9;
+    cursor: pointer;
 }
 
-/* Footer */
-
+/* Footer styling (on about.html, project.html, contact.html) */
+/* Includes styling of social media logos */
 .footer{
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: rgb(99, 66, 24);
+    box-shadow: 0 -2px 6px 0 rgba(0,0,0,.2);
     color: white;
     text-align: center;
-    height: 40px;
+    height: 2.5rem;
 }
 
 .footer-info{
-    padding-top: 2px;
+    padding-top: 0.125rem;
 }
 
+/* Adjust size of the social media logos */
 .fa{  
-    padding: 5px;  
+    padding: 0.3125rem;  
     text-align: center;  
-    margin: 5px 15px;  
-    font-size: 30px;  
-    width: 50px;  
+    margin: 0.3125rem 1rem;  
+    font-size: 1.875em;  
+    width: 3.125rem;  
 }  
 
+/* Colour of social media logos */
 .fa-facebook,
 .fa-instagram,
 .fa-twitter{
@@ -395,6 +415,7 @@ input[type=email]:focus{
     opacity: 0.5;
 }
 
+/* Change in social media logos colour when hover */
 .fa-facebook:hover,
 .fa-instagram:hover,
 .fa-twitter:hover{
@@ -402,15 +423,11 @@ input[type=email]:focus{
     opacity: 1;
 }
 
-
-
-
-
-
-
-
 /* MEDIA QUERIES */
+/* For mobile phone */
 @media (max-width: 576px){
+
+    /* Navigation bar, adjust to fit in mobile view */
     .header-content{
         flex-direction: column;
         padding: 1.6rem 0;
@@ -422,6 +439,7 @@ input[type=email]:focus{
         column-gap: 1.25rem;
     }
 
+    /* Index page, change page alignment along with title and description */
     .index-container{
         text-align: center;
         padding-top: 15rem;
@@ -439,20 +457,22 @@ input[type=email]:focus{
         font-size: 1rem;
     }
 
+    /* About page, change title size and arrangement, adjust image and text position */
+    .about-title{
+        margin-top: 3.75rem;
+        text-align: center;
+        padding-left: 1rem;
+        padding-bottom: 0.625rem;
+        font-size: 2rem;
+    }
+
     .columns{
         flex-basis: 100%;
         flex: 1 90%;
         flex-grow: 0;
     }
 
-    .about-title{
-        margin-top: 60px;
-        text-align: center;
-        padding-left: 15px;
-        padding-bottom: 10px;
-        font-size: 2rem;
-    }
-
+    /* Project page, change project title size and adjust div block arrangement */
     .project-body{
         min-height: 112rem;
     }
@@ -465,15 +485,17 @@ input[type=email]:focus{
         margin-left: 5.4rem;
     }
 
+    /* Contact page, changing title size and alignment */
     .contact-title{
-        padding-top: 50px;
-        padding-bottom: 20px;
-        margin-top: 60px;
+        padding-top: 3.125rem;
+        padding-bottom: 1.25rem;
+        margin-top: 3.75rem;
         text-align: center;
-        padding-left: 15px;
+        padding-left: 1rem;
         font-size: 2rem;
     }
 
+    /* Contact page, change arrangement of contact information and form */
     .split{
         flex-basis: 100%;
         flex: 1 80%;
@@ -482,20 +504,22 @@ input[type=email]:focus{
     }
 
     .split-info{
-        padding-bottom: 70px;
+        padding-bottom: 4.375rem;
     }
 
     .split-form{
-        padding-bottom: 70px;
+        padding-bottom: 4.375rem;
     }
 }
 
+/* For tablet */
 @media (min-width: 576px) and (max-width: 768px){
 
+    /* Project page, to arrange and fit div blocks in tablet size */
     .project-title{
-        padding-top: 30px;
+        padding-top: 1.875rem;
         padding-left: 1rem;
         font-size: 2em;
-        padding-bottom: 42px;
+        padding-bottom: 2.625rem;
     }
 }
